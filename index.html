@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"
+        integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="encrypt">
+                <h2>Message to Encrypt</h2>
+                <textarea id="msgencrypt"></textarea>
+                <div class="key">
+                    <label>Encryption Key</label>
+                    <input type="text" id="ekey">
+                </div>
+                <div class="buttons">
+                    <button id="encryptBtn" onclick="encrypt()">Encrypt</button>
+                    <button id="copyEncryptBtn" onclick="copyEncryptBtn()">Copy Encryption</button>
+                </div>
+                <textarea id="encryptmsg"></textarea>
+            </div>
+            <div class="decrypt">
+                <h2>Message to Decrypt</h2>
+                <textarea id="msgdecrypt"></textarea>
+                <div class="key">
+                    <label>Encryption Key</label>
+                    <input type="text" id="dkey">
+                </div>
+                <div class="buttons">
+                    <button id="encryptBtn" onclick="decrypt()">Decrypt</button>
+                    <button id="copyDecryptBtn" onclick="copyDecryptBtn()">Copy Decryption</button>
+                </div>
+                <textarea id="decryptmsg"></textarea>
+            </div>
+        </div>
+        <div class="algorithm">
+            <div>Choose Algorithm </div>
+            <select name="" id="selectAlgorithm">
+                <option value="AES" selected>AES</option>
+                <option value="RSA">RSA</option>
+            </select>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
